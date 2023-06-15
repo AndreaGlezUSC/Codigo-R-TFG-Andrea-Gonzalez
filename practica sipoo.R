@@ -47,8 +47,8 @@ dis.jac
 disjac3<-dist.binary(sipoo,method=1)
 round(disjac3,3)
 
-library(xtable)
-xtable(dis.jac, type = "latex", file = "tablas.tex")
+#library(xtable)
+#xtable(dis.jac, type = "latex", file = "tablas.tex")
 
 #INDICE DE JACCARD
 A<-matrix(1,nrow=18,ncol=18)
@@ -89,6 +89,7 @@ plot(clust.ej.simple,lwd=4, main='',)
 
 #EJEMPLO CLUSTER JERARQUICO
 
+library(cluster)
 windows()
 
 clust.jac.simple<-hclust(disjac1,method='single')
