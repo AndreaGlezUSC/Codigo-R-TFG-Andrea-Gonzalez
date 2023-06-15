@@ -86,7 +86,7 @@ windows()
 par(mfrow=c(1,3))
 x <- 1:100
 
-#correlación lineal directa
+#relación lineal directa
 set.seed(1)
 y <- x + rnorm(100, mean = 0, sd = 10)
 plot(x, y, pch = 19)
@@ -94,7 +94,7 @@ abline(lm(y ~ x), col = "red", lwd = 3)
 r1<-round(cor(x, y), 2)
 text(paste("Correlación:",r1), x = 15, y = 100,col='red')
 
-#sin correlación lineal
+#sin relación lineal
 set.seed(1)
 y <- x + rnorm(100, mean = 0, sd = 400)
 plot(x, y, pch = 19)
@@ -102,7 +102,7 @@ abline(lm(y ~ x), col = "blue", lwd = 3)
 r2<-round(cor(x, y), 2)
 text(paste("Correlación:", round(cor(x, y), 2)), x = 15, y = 900,col="blue")
 
-#correlación lineal inversa
+#relación lineal inversa
 set.seed(1)
 y <- -x + rnorm(100, mean = 0, sd = 10)
 plot(x, y, pch = 19)
@@ -153,7 +153,7 @@ deppear<-round(cor(dd),3)   #correlación de Pearson sobre las variables con men
 
 #######3.LUGARES DE DUNE.ENV#######
 
-#GOWER
+#Gower
 
 library(cluster)
 
